@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorRow"
+    android:layout_margin="@dimen/row_top_margin"
+    android:elevation="@dimen/row_elevation"
+    android:padding="@dimen/row_padding">
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/img_arrow"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/row_title_text_size"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_title"
+        android:layout_toLeftOf="@+id/img_arrow">
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/img_feed"
+            android:textSize="@dimen/row_description_text_size"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/img_feed"
+            android:layout_width="@dimen/row_image_width"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_arrow"
+        android:layout_width="@dimen/row_arrow_dimen"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_arrow"/>
+
+</RelativeLayout>
